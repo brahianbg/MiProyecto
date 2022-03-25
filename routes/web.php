@@ -8,6 +8,7 @@ use App\Http\Controllers\heladosController;
 
 use App\Http\Controllers\ControladorPrecios;
 use App\Http\Controllers\cursoController;
+use App\Http\Controllers\DocenteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,4 @@ Route::get ('heladeria/{opcion}',[heladosController::class, 'helado']);
 Route::get('precioss/{prec}',[ControladorPrecios::class, 'precio']);
 Route::get('iva/{NombreP}/{precio}',[ControladorPrecios::class, 'getIVA']);
 Route::resource('cursos', cursoController::class);
+Route::resource('docentes', DocenteController::class);
